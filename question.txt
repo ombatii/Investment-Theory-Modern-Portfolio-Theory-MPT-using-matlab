@@ -1,0 +1,77 @@
+
+1 Implementing MPT
+The file HW3data.csv contains monthly historical returns of 5 industry portfolios from July
+1926 to December 2014. (Source: Professor Kenneth French’s website.)
+Note: this is that same data that you used in Question 3 of Problem Set 2.
+(a) Compute the annualized expected returns and covariance matrix. (Hint: Estimate the
+expected returns and covariance matrix of monthly returns first, then multiply them by
+12.) Note: this is the same question as 3(a) on Problem Set 2.
+(b) Assume that the risk-free rate is 3%. Find the MVE portfolio weights and compute its
+Sharpe Ratio.
+(c) You have been hired to manage the portfolio of a mean-variance investor with a coefficient
+of risk aversion γ = 3. You have decided to invest in these 5 industry portfolios and
+the risk free asset. Find the optimal portfolio weights for the investors and compute the
+Sharpe Ratio of the portfolio.
+(d) How does the Sharpe Ratio in part (b) compare to the one in part (c)? Explain.
+1
+2 The Geometry of the MVF
+Suppose there is no riskless asset and we have three stocks: A, B and C. Their expected
+returns are given by
+r =
+
+
+
+10%
+20%
+30%
+
+
+ .
+The covariance matrix is
+V =
+
+
+
+1 0 0
+0 1 0
+0 0 1
+
+
+ .
+(a) Let p be a portfolio on the minimum-variance frontier (MVF). Write the return standard
+deviation of p, σp, as a function of its expected return rp.
+(b) Using the result you obtained from part (a), plot the MVF.
+(c) Find the global minimum-variance portfolio xGM V .
+(d) Label the minimum-variance portfolio p′ with E[rp′ ] = 25% on the MVF you draw in
+part (b).
+(e) Find a portfolio p′′ on the MVF which is uncorrelated with p′ and label it on the plot
+you draw in part (b). p′′ is called the zero-beta portfolio for p′.
+(f) Now draw a straight line that passes through (0, rp′′ ) and (σp′ , rp′ ). What do you find?
+Hint: you should conclude that you have found a geometric method to determine the
+expected return of the zero-beta portfolio for almost any portfolio on the MVF.
+3 Implementing MPT with Portfolio Constraints
+Let us revisit the portfolio problem in Topic 2, but in the face of portfolio constraints. As
+before, you can invest your wealth into either the riskless asset (1% per year) or in three
+stock market indices with the following characteristics:
+2
+Asset E(r) σ
+US 8.0% 19%
+Japan 3.7% 25%
+Mexico 6.0% 15%
+Correlations
+Assets US J M
+US 1.0 0.5 0.8
+J 0.5 1.0 0.2
+M 0.8 0.2 1.0
+(a) Compute the MVE portfolio weights and the Sharpe Ratio in the absence of portfolio
+constraints. Verify that you get the same numbers as we got in the Topic 2 notes.
+(b) Now impose a no short-sales constraint (i.e., the portfolio weight in each asset must be
+non-negative). Based on your answer to part (i), for which asset will the constraint bind?
+Hint: you do not need to use numerical methods in Excel or Matlab to solve this or any
+other part of this question. Just use your common sense!
+(c) Assuming that your answer to (ii) is correct, recompute the MVE portfolio weights and
+the Sharpe ratio under the no short-sale constraint. How does the Sharpe ratio compare
+to part (i). Explain.
+(d) Under the no-short sales constraint, what are the optimal portfolio weights for a mean-
+variance investor with γ = 2?
+3
